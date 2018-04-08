@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/Style.css">
+    <title>Quiz1</title>
+</head>
+<body>
+    <header>
+        <img src ="Images/Logo.svg.png" class="center_header">
+        <h3 class="center_header">King Fahd University of Petroleum and Minerals</h3>
+        <a href='index.html' onclick='return leavePage()' class='center_header'>Home</a>
+    </header>
+
+    <!--Confirms Name and Email-->
+    <div class="first_div_container" id="validate">
+        <div class="first_div">
+            <form class="center_form" method="POST">
+                <label >Name:</label>
+                <input type="text" name="Name" id="thisName">
+                <label >Email:</label>
+                <input type="text" name="Email" id="thisEmail">
+                <button type="button" onclick="return validateForm()">Submit</button>
+            </form>
+         </div>
+    </div>
+
+    <!--Exam starts here-->
+    <section id="question_section_container" class= "ifValidatedShow">
+        <!--Group 1-->
+        <div id="firstQuestionGroup">
+            <h3>Question Group 1</h3>
+            <p id="Question1Timer" class="ifValidatedShow" onclick="setup(30, 'Question1Timer', 'firstQuestionGroup','secondQuestionGroup')">Timer</p>
+            <div class="NavButtons">
+                <button class="questionButton" onclick="changeQuestion(event, 'question11')">Q1</button>
+                <button class="questionButton" onclick="changeQuestion(event, 'question12')">Q2</button>
+                <button class="questionButton" onclick="changeQuestion(event, 'question13')">Q3</button>
+                <button class="questionButton" onclick="changeQuestion(event, 'question14')">Q4</button>
+                <button class="questionButton" onclick="changeQuestion(event, 'question15')">Q5</button>
+                <button type="button" class="questionButton" onclick="nextQuestionGroup('firstQuestionGroup', 'secondQuestionGroup')">Next</button>
+            </div>
+            <div id="question11" class="contents questionGroupHide">
+                <p>5 * 6 =</p>
+                <form method="get" id="question1Form">
+                    <input type="radio" name="question1" value="20">
+                    <label >20</label><br>
+                    <input type="radio" name="question1" value="11">
+                    <label>11</label><br>
+                    <input type="radio" name="question1" value="1">
+                    <label ></label><br>
+                    <input type="radio" name="question1" value="30">
+                    <label >30</label><br>
+                </form>
+            </div>
+            <div id="question12" class="contents questionGroupHide">
+                    <p>2 * 4 =</p>
+                    <form method="get" id="question2Form">
+                        <input type="radio" name="question2" value="20">
+                        <label >20</label><br>
+                        <input type="radio" name="question2" value="6">
+                        <label >6</label><br>
+                        <input type="radio" name="question2" value="8">
+                        <label >8</label><br>
+                        <input type="radio" name="question2" value="15">
+                        <label >15</label><br>
+                    </form>
+            </div>
+            <div id="question13" class="contents questionGroupHide">
+                    <p>10 * 6 =</p>
+                    <form method="get">
+                        <input type="radio" name="question3" value="160">
+                        <label>160</label><br>
+                        <input type="radio" name="question3" value="60">
+                        <label >60</label><br>
+                        <input type="radio" name="question3" value="4">
+                        <label >4</label><br>
+                        <input type="radio" name="question3" value="16">
+                        <label >16</label><br>
+                    </form>
+            </div>
+            <div id="question14" class="contents questionGroupHide">
+                    <p>8 * 3 =</p>
+                    <form method="get">
+                        <input type="radio" name="question4" value="24">
+                        <label >24</label><br>
+                        <input type="radio" name="question4" value="11">
+                        <label >11</label><br>
+                        <input type="radio" name="question4" value="5">
+                        <label >5</label><br>
+                        <input type="radio" name="question4" value="31">
+                        <label >31</label><br>
+                    </form>
+            </div>
+            <div id="question15" class="contents questionGroupHide">
+                    <p>5 * 50 =</p>
+                    <form method="get">
+                        <input type="radio" name="question5" value="200">
+                        <label >200</label><br>
+                        <input type="radio" name="question5" value="150">
+                        <label >150</label><br>
+                        <input type="radio" name="question5" value="300">
+                        <label >300</label><br>
+                        <input type="radio" name="question5" value="250">
+                        <label >250</label><br>
+                    </form>
+            </div>
+        </div>
+
+        <!--Group 2-->
+        <div id="secondQuestionGroup" class = "questionGroupHide">
+            <h3>Question Group 2</h3>
+            <p id="Question2Timer" class="ifValidatedShow" onclick="setup(30, 'Question2Timer', 'secondQuestionGroup','thirdQuestionGroup')">Timer</p>
+            <div class="NavButtons">
+                <button class="questionButton" onclick="changeQuestion(event, 'question21')">Q1</button>
+                <button class="questionButton" onclick="changeQuestion(event, 'question22')">Q2</button>
+                <button class="questionButton" onclick="changeQuestion(event, 'question23')">Q3</button>
+                <button type="button" class="questionButton" onclick="nextQuestionGroup('secondQuestionGroup', 'thirdQuestionGroup')">Next</button>
+            </div>
+            <div id="question21" class = "contents questionGroupHide">
+                <p>60 is the result of multiplying:</p>
+                <form method="get">
+                    <input type="checkbox" name="check11" value="1">
+                    <label>15 and 4</label><br>
+                    <input type="checkbox" name="check12" value="2">
+                    <label>7 and 9</label><br>
+                    <input type="checkbox" name="check13" value="3">
+                    <label>6 and 10</label><br>
+                    <input type="checkbox" name="check14" value="4">
+                    <label>5 and 12</label><br>
+                </form>
+            </div>
+            <div id="question22" class ="contents questionGroupHide">
+                <p>36 is the result of multiplying:</p>
+                <form method="get">
+                    <input type="checkbox" name="check21" value="1">
+                    <label>15 and 4</label><br>
+                    <input type="checkbox" name="check22" value="2">
+                    <label>7 and 9</label><br>
+                    <input type="checkbox" name="check23" value="3">
+                    <label>6 and 6</label><br>
+                    <input type="checkbox" name="check24" value="4">
+                    <label>4 and 9</label><br>
+                </form>
+            </div>
+            <div id="question23" class = "contents questionGroupHide">
+                <p>100 is the result of multiplying:</p>
+                <form method="get">
+                    <input type="checkbox" name="check31" value="1">
+                    <label>25 and 4</label><br>
+                    <input type="checkbox" name="check32" value="2">
+                    <label>7 and 13</label><br>
+                    <input type="checkbox" name="check33" value="3">
+                    <label>10 and 10</label><br>
+                    <input type="checkbox" name="check34" value="4">
+                    <label>4 and 9</label><br>
+                </form>
+            </div>
+        </div>
+
+        <!--Group 3-->
+        <div id="thirdQuestionGroup" class = "questionGroupHide">
+            <h3>Question Group 3</h3>
+            <p id="Question3Timer" class="ifValidatedShow" onclick="setup(30, 'Question3Timer', 'secondQuestionGroup','thirdQuestionGroup')">Timer</p>
+            <div class="NavButtons">
+                <button class="questionButton" onclick="changeQuestion(event, 'question31')">Q1</button>
+                <button class="questionButton" onclick="changeQuestion(event, 'question32')">Q2</button>
+                <button class="questionButton" onclick="examEndPage()">Submit</button>
+            </div>
+
+            <div id="question31" class = "contents questionGroupHide">
+                <p>Arrange the multiplications to get 330 as the results</p>
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="Images/helvetica-number-11.png" alt="Number11" draggable="true" ondragstart="drag(event)" id="drag1" class="size">
+                </div>
+
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="Images/helvetica-number-30.png" alt="number30" draggable="true" ondragstart="drag(event)" id="drag2" class="size">
+                </div>
+
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="Images/number-3-1c.png" alt="number3" draggable="true" ondragstart="drag(event)" id="drag3" class="size">
+                </div>
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="Images/number-60-sixty.png" alt="number60" draggable="true" ondragstart="drag(event)" id="drag4" class="size">
+                </div>
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="Images/Multiplication_Sign.svg.png" alt="multiplication sign" draggable="true" ondragstart="drag(event)" id="drag5" class="size">
+                </div>
+
+                <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            
+            <div id="question32" class = "contents questionGroupHide">
+                <p>Arrange the multiplications to get 660 as the results</p>
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="Images/helvetica-number-11.png" alt="number11" draggable="true" ondragstart="drag(event)" id="drag6" class="size">
+                </div>
+
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="Images/helvetica-number-30.png" alt="number30" draggable="true" ondragstart="drag(event)" id="drag7" class="size">
+                </div>
+
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="Images/number-3-1c.png" alt="number3" draggable="true" ondragstart="drag(event)" id="drag8" class="size">
+                </div>
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="Images/number-60-sixty.png" alt="number60" draggable="true" ondragstart="drag(event)" id="drag9" class="size">
+                </div>
+                <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="Images/Multiplication_Sign.svg.png" alt="multiplication sign" draggable="true" ondragstart="drag(event)" id="drag10" class="size">
+                </div>
+                
+                <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    <script src="Scripts/footer.js"></script>
+    <script src="Scripts/Form.js"></script>
+</body>
+
+</html>

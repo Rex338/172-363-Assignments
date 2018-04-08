@@ -1,0 +1,108 @@
+body {
+    background-image: url(https://login.kfupm.edu.sa:8447/cas-web/images/kfupmmbg.jpg);
+    margin: 10px;
+}
+
+.introPara{
+    color: blue;
+    font-size: large;
+}
+.center_form{
+    margin: 0.5%;
+}
+
+.center_header{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 10%;
+    text-align: center;
+    font-size: 100%;
+}
+
+.first_div_container {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.first_div {
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.questionGroupHide{
+    display: none;
+}
+
+.list_of_quizzes {
+    background-color: white;
+}
+
+.validate{
+    font-size: medium;
+    background-color: blanchedalmond;
+}
+
+.NavButtons .questionButton{
+    overflow: hidden;
+    color:white;
+    background-color: black;
+    border: black;
+}
+
+.div1, .div2 {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 25px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.size{
+    height: 60px;
+    width: 60px;
+}
+
+.ifValidatedShow{
+    display: none;
+}
+
+.validated{
+    display: none;
+}
+
+#header{
+    margin: 10px;
+}
+
+#footer{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    widows: 100%;
+    background-color: black;
+    color: white;
+    border-style: outset;
+    border-color: white;
+}
+
+#question_section_container{
+    border-style: solid;
+    background-color: white;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1%;
+    padding: 1%;
+}
+
+#div3{
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    padding: 10px;
+}

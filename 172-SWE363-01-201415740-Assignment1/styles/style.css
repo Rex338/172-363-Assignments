@@ -1,0 +1,131 @@
+/*I have found this on stackoverflow*/
+body:before{
+	content: url('../Images/Header.png');
+}
+
+body:after{
+	content: url('../Images/footer.png');
+}
+
+/*
+I got the idea from stackoverflow and w3schools but i optimazed
+*/
+
+table, td{
+	border: 1px solid black;
+	width: 450px;
+}
+a{
+	float: right;
+	font-size: 50px;
+	border-style: solid;
+}
+
+a:hover{
+	color: red;
+}
+p{
+	font-family: "Times New Roman", Times, serif;
+	font-family: Arial, Helvetica, sans-serif;
+	font-family: Georgia, serif;
+	font-weight: normal;
+}
+
+b{
+	text-decoration: underline;
+}
+
+thead td{
+	background-color: black;
+	color: white;
+}
+
+ul{
+	list-style-type: disc;
+}
+
+.Course_Policies_Style{
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.Course_Policies_Head{
+	color: blue;
+	
+}
+
+.margin_bot{
+	margin-bottom: 15px;
+}
+
+.inline{
+	display: inline;
+}
+.Head{
+	font-weight: bold;
+}
+
+.numbered{
+	font-size: large;
+}
+
+.small_size{
+	font-size: small;
+}
+
+.Page{
+   word-wrap: break-word;
+   width: 1080px;
+}
+
+.BookName{
+	text-decoration: underline;
+}
+
+.horizantal_Zero{
+	height: 0px;
+}
+
+.GLHF{
+	text-align: center;
+}
+
+.Table_Styling tr:nth-child(odd){
+	background-color: #CCC;
+}
+.wrap{
+	position: relative;
+	float:right;
+ 	height: auto;
+ 	width: 400px;
+}
+
+.description{
+	position: absolute;
+  	color: #000;
+  	visibility: hidden;
+  	opacity: 0;
+  	border-style: double;
+  	background-color: BlanchedAlmond;
+}
+
+.wrap:hover .wrap_363:hover .description{
+	visibility: visible;
+  	opacity: 1;
+}
+
+.wrap:hover .wrap_312:hover .description{
+	visibility: visible;
+  	opacity: 1;
+}
+
+.wrap:hover .wrap_316:hover .description{
+	visibility: visible;
+  	opacity: 1;
+}
+
+.wrap:hover .wrap_387:hover .description{
+	visibility: visible;
+  	opacity: 1;
+}
