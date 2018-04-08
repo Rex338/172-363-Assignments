@@ -41,7 +41,9 @@ var count = 0;
 function convertSeconds(s){
     var min = Math.floor(s/60);
     var sec = s % 60;
-    return min + ':' + sec;
+    if(min >0)
+        return min + ' m ' + sec + ' s';
+    else return sec + ' s';
 }
 
 
@@ -63,7 +65,7 @@ function setup(timeAmountAllowed, elementID, currentQuestionGroup, nextQuestionG
             myElement.innerHTML = convertSeconds(timeAmountAllowed-count);
         }
     }
-    if(!(timeAmountAllowed-count < 1) && typeof setTimer != 'number'){
+    if(!(timeAmountAllowed-count < 1)){
         setTimer = setTimeout(timer, 1000);
     }
 }
